@@ -1,0 +1,16 @@
+
+//спільний заголовок по центру
+.com-title{
+   max-width: 808px;
+   margin: 0   auto;
+   h2{
+      font-weight: 700;
+      color: var(--Text-Icon-Primary, #FFF);
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: $ffRoboto;
+      font-size: 80px;
+      line-height: 88px; /* 110% */
+      letter-spacing: -1.76px;
+   }
+}

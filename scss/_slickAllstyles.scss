@@ -1,0 +1,116 @@
+
+/* Слайдер */
+.slider{  //.slider = мій клас слайдеру//
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+	text-align: center;
+	
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+/* Слайд */
+.slick-slide{
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/*=======================================*/
+/*стилі для конкретного слайду*/
+
+.built__slider{
+	min-width: 0;
+	position: relative;
+	padding: 0 25px;
+	@media(min-width: 768px){
+		& .slick-slide{
+			opacity: 0.5;
+		}
+		& .slick-slide.slick-center{
+			opacity: 1;
+			transition: opacity 0.3s ease;
+		}
+	}
+}
+
+.built__slider .slick-arrow{
+	margin-top: 30px;
+	font-size: 0;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	@media(min-width:767.98px){
+		&:hover{
+			background-color: #96b7dd;
+			transition: all 0.3s ease;
+		}
+	}
+	&.slick-next{
+		position: absolute;
+		right: 0;
+		top: 100%;
+		z-index: 3;
+		margin-right: 100px;
+		&::before{
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 25%;
+			width: 24px;
+			height: 24px;
+			background: url('../img/sliderarrow.svg') 0 0 no-repeat;
+			transform: translateY(-50%);
+			
+		}
+	}
+	&.slick-prev{
+		left: 0;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		z-index: 3;
+		margin-left: 100px;
+		&::before{
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 25%;
+			width: 24px;
+			height: 24px;
+			background: url('../img/sliderarrow.svg') 0 0 no-repeat;
+			transform: rotate(-180deg) translateY(50%);
+			//transform: translateY(-50%);
+		}
+	}
+}
